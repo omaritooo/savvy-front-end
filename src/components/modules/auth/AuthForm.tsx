@@ -10,12 +10,13 @@ export const AuthForm = () => {
 
       <span className="text-lg text-center">
         {userState ? "Don't you have an account?" : "Already have an account?"}{" "}
-        <span
+        <button
           className="text-blue-500"
           onClick={() => setUserState((userState) => !userState)}
+          type="button"
         >
           Sign {userState ? "Up" : "In"}
-        </span>
+        </button>
       </span>
     </form>
   );

@@ -69,11 +69,11 @@ export const AuthLogin = () => {
               type="button"
             >
               <span className="mt-3 text-base text-right text-blue-400 xl:mt-6">
-                {forgetPassword ? "Forget your password?" : "Back to login"}
+                {!forgetPassword ? "Forget your password?" : "Back to login"}
               </span>
             </button>
           </FormContainer>
-          <div className="flex flex-col gap-y-6 max-w-[380px]">
+          {/* <div className="flex flex-col gap-y-6 max-w-[380px]">
             <div className="flex items-center w-full gap-x-4">
               <div className="h-[1px] bg-gray-400 flex-1" />
               <span>Or</span>
@@ -83,33 +83,33 @@ export const AuthLogin = () => {
               <ButtonFacebook />
               <ButtonGoogle />
             </div>
-          </div>
+          </div> */}
         </div>
       </motion.div>
     </AnimatePresence>
   );
 };
 
-const ButtonFacebook = () => (
-  <button
-    className="bg-[#F3F9FA]  text-center flex justify-center lg:justify-start md:px-20 lg:px-12 xl:px-20 rounded-xl py-2 xl:py-2 drop-shadow-sm"
-    type="button"
-  >
-    <span className="flex items-center text-center gap-x-2">
-      <img height="28" src="/Vector.svg" width="28" />
-      Sign in with Facebook
-    </span>
-  </button>
-);
+// const ButtonFacebook = () => (
+//   <button
+//     className="bg-[#F3F9FA]  text-center flex justify-center lg:justify-start md:px-20 lg:px-12 xl:px-20 rounded-xl py-2 xl:py-2 drop-shadow-sm"
+//     type="button"
+//   >
+//     <span className="flex items-center text-center gap-x-2">
+//       <img height="28" src="/Vector.svg" width="28" />
+//       Sign in with Facebook
+//     </span>
+//   </button>
+// );
 
-const ButtonGoogle = () => (
-  <button
-    className="bg-[#F3F9FA]  text-center flex justify-center lg:justify-start md:px-20 lg:px-12 xl:px-20 rounded-xl py-2 xl:py-2 drop-shadow-sm"
-    type="button"
-  >
-    <span className="flex items-center gap-x-2 text-centter">
-      <img height="28" src="/Google.svg" width="28" />
-      Sign in with Google
-    </span>
-  </button>
-);
+// const ButtonGoogle = () => (
+//   <button
+//     className="bg-[#F3F9FA]  text-center flex justify-center lg:justify-start md:px-20 lg:px-12 xl:px-20 rounded-xl py-2 xl:py-2 drop-shadow-sm"
+//     type="button"
+//   >
+//     <span className="flex items-center gap-x-2 text-centter">
+//       <img height="28" src="/Google.svg" width="28" />
+//       Sign in with Google
+//     </span>
+//   </button>
+// );
