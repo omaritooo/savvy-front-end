@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { textVariants } from "@/utils/variants/sidebarVariants";
 
@@ -9,7 +9,7 @@ interface Props {
   toggled: boolean;
   name: string;
   path: string;
-  iconName: string;
+  // iconName: string;
 }
 
 // const IconPicker = {
@@ -18,7 +18,7 @@ interface Props {
 //   History: IconsGraphs,
 //   FAQ: IconsFaq,
 // };
-export const BaseTab = ({ toggled, name, path, iconName }: Props) => {
+export const BaseTab = ({ toggled, name, path }: Props) => {
   //   const { pathname } = useLocation();
   console.log("Sidebar.");
   //   const attrs = { active: path === pathname };
