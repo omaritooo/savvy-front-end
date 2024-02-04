@@ -57,17 +57,11 @@ export const Sidebar = () => {
       <div className="flex flex-col items-start w-full px-2 gap-y-10">
         {Object.keys(routeMap).map((key) => {
           const name = routeMap[key].iconName;
-          const iconName = routeMap[key as keyof typeof routeMap].iconName;
+          // const iconName = routeMap[key as keyof typeof routeMap].iconName;
           const path = routeMap[key as keyof typeof routeMap].path;
 
           return (
-            <BaseTab
-              iconName={iconName}
-              key={name}
-              name={name}
-              path={path}
-              toggled={toggled}
-            />
+            <BaseTab key={name} name={name} path={path} toggled={toggled} />
           );
         })}
       </div>
