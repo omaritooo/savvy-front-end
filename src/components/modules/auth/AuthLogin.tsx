@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BaseInput } from "../../common/base/BaseInput";
 import { FormContainer } from "./FormContainer";
 import { AnimatePresence, motion } from "framer-motion";
+import { BaseOtp } from "@/components/common/base/BaseOtp";
 
 export const AuthLogin = () => {
   const [form, setForm] = useState({
@@ -51,17 +52,21 @@ export const AuthLogin = () => {
                   value={form.password}
                   valueGetter={formValidation}
                 />
+                {/* <BaseOtp /> */}
               </>
             ) : (
-              <BaseInput
-                id="email"
-                label="Email"
-                name="email"
-                placeholder="Enter your email.."
-                type="text"
-                value={form.email}
-                valueGetter={formValidation}
-              />
+              <div className="flex flex-col gap-y-5">
+                <BaseInput
+                  id="email"
+                  label="Email"
+                  name="email"
+                  placeholder="Enter your email.."
+                  type="text"
+                  value={form.email}
+                  valueGetter={formValidation}
+                />
+                <BaseOtp numberOfDigits={6} />
+              </div>
             )}
             <button
               className="self-end bg-transparent w-fit h-fit"

@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { variants, textVariants } from "@/utils/variants/sidebarVariants";
 import { BaseTab } from "./base/BaseTab";
-import { IconsArrow } from "../icons/iconsArrow";
+// import { IconsArrow } from "../icons/iconsArrow";
 
 interface Route {
   [key: string]: {
@@ -35,6 +35,8 @@ export const Sidebar = () => {
       animate={toggled ? " open" : "closed"}
       className="sticky top-0 left-0 flex-col items-center justify-between hidden h-screen px-2 py-8 transition duration-150 bg-gray-100 shadow-xl lg:flex dark:text-white dark:bg-dark-container w-fit"
       initial="closed"
+      onHoverEnd={() => setToggled(false)}
+      onHoverStart={() => setToggled(true)}
       variants={variants}
     >
       <div className="flex items-center max-h-10 ">
@@ -71,7 +73,7 @@ export const Sidebar = () => {
           ` ${toggled} ? 'mr-auto' : 'mx-auto`
         }
       >
-        <button
+        {/* <button
           className="flex items-center justify-center w-full"
           onClick={() => {
             setToggled(!toggled);
@@ -79,7 +81,7 @@ export const Sidebar = () => {
           type="button"
         >
           <IconsArrow toggled={toggled} />
-        </button>
+        </button> */}
       </div>
     </motion.aside>
   );
