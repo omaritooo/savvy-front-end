@@ -17,7 +17,7 @@ export const BaseOtp = ({ numberOfDigits }: { numberOfDigits: number }) => {
     }
   };
 
-  const handleBackspaceAndEnter = (e: KeyboardEvent, index: number) => {
+  const handleBackspaceAndEnter = (e: any, index: number) => {
     if (otpBoxReference.current) {
       if (e.key === "Backspace" && !e.target.value && index > 0) {
         otpBoxReference["current"][
